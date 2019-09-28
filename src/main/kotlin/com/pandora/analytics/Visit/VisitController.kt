@@ -10,9 +10,9 @@ import reactor.core.publisher.toFlux
 @RequestMapping("/visits")
 class VisitController(private val visitRepository: VisitRepository) {
 
-//    @GetMapping("/visits")
-//    fun getAllVisits(): Flux<Visit> =
-//            visitRepository.findAll()
+    @GetMapping
+    fun getAllVisits(): Flux<Visit> =
+            visitRepository.findAll()
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
