@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class com.pandora.analytics.Visit.VisitControllerTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class com.pandora.analytics.Visit.VisitControllerTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.pandora.analytics.Visit.html">com.pandora.analytics.Visit</a> &gt; VisitControllerTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">1</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">2.036s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="testAddAndGetVisit"></a>
+<h3 class="failures">testAddAndGetVisit</h3>
+<span class="code">
+<pre>java.lang.AssertionError: Status expected:&lt;201 CREATED&gt; but was:&lt;500 INTERNAL_SERVER_ERROR&gt;
+
+&gt; POST /visits
+&gt; WebTestClient-Request-Id: [1]
+&gt; Content-Length: [17]
+&gt; Content-Type: [application/json;charset=UTF-8]
+
+{&quot;a&quot;:&quot;1&quot;,&quot;b&quot;:&quot;2&quot;}
+
+&lt; 500 INTERNAL_SERVER_ERROR Internal Server Error
+&lt; 
+
+0 bytes of content (unknown content-type).
+
+	at org.springframework.test.web.reactive.server.ExchangeResult.assertWithDiagnostics(ExchangeResult.java:200)
+	at org.springframework.test.web.reactive.server.StatusAssertions.assertStatusAndReturn(StatusAssertions.java:227)
+	at org.springframework.test.web.reactive.server.StatusAssertions.isCreated(StatusAssertions.java:75)
+	at com.pandora.analytics.Visit.VisitControllerTest.testAddAndGetVisit(VisitControllerTest.kt:37)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:74)
+	at org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:84)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:118)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:412)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: java.lang.AssertionError: Status expected:&lt;201 CREATED&gt; but was:&lt;500 INTERNAL_SERVER_ERROR&gt;
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:98)
+	at org.springframework.test.web.reactive.server.StatusAssertions.lambda$assertStatusAndReturn$4(StatusAssertions.java:227)
+	at org.springframework.test.web.reactive.server.ExchangeResult.assertWithDiagnostics(ExchangeResult.java:197)
+	... 59 more
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="failures">testAddAndGetVisit</td>
+<td class="failures">2.036s</td>
+<td class="failures">failed</td>
+</tr>
+</table>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>22:11:07.837 [Test worker] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.pandora.analytics.Visit.VisitControllerTest]
+22:11:07.864 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+22:11:07.901 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+22:11:07.959 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.pandora.analytics.Visit.VisitControllerTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+22:11:07.994 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.pandora.analytics.Visit.VisitControllerTest], using SpringBootContextLoader
+22:11:08.013 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.pandora.analytics.Visit.VisitControllerTest]: class path resource [com/pandora/analytics/Visit/VisitControllerTest-context.xml] does not exist
+22:11:08.014 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.pandora.analytics.Visit.VisitControllerTest]: class path resource [com/pandora/analytics/Visit/VisitControllerTestContext.groovy] does not exist
+22:11:08.015 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.pandora.analytics.Visit.VisitControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+22:11:08.017 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.pandora.analytics.Visit.VisitControllerTest]: VisitControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22:11:08.160 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.pandora.analytics.Visit.VisitControllerTest]
+22:11:08.371 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [C:\Users\guve4\www\analytics\build\classes\kotlin\main\com\pandora\analytics\AnalyticsApplication.class]
+22:11:08.376 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.pandora.analytics.AnalyticsApplication for test class com.pandora.analytics.Visit.VisitControllerTest
+22:11:08.693 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.pandora.analytics.Visit.VisitControllerTest]: using defaults.
+22:11:08.694 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+22:11:08.742 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [javax/servlet/ServletContext]
+22:11:08.763 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4db17634, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7f1334a, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@439ee176, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1e5a82ef, org.springframework.test.context.transaction.TransactionalTestExecutionListener@589c57c6, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@567944fc, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@62588a14, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@28df214a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@12c761f0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@e0599f0, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@282baa0e]
+22:11:08.782 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.pandora.analytics.Visit.VisitControllerTest]
+22:11:08.783 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.pandora.analytics.Visit.VisitControllerTest]
+22:11:08.798 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.pandora.analytics.Visit.VisitControllerTest]
+22:11:08.798 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.pandora.analytics.Visit.VisitControllerTest]
+22:11:08.801 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.pandora.analytics.Visit.VisitControllerTest]
+22:11:08.806 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.pandora.analytics.Visit.VisitControllerTest]
+22:11:08.816 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@2c4fe63e testClass = VisitControllerTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [ReactiveWebMergedContextConfiguration@72ba4141 testClass = VisitControllerTest, locations = '{}', classes = '{class com.pandora.analytics.AnalyticsApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@35346cb1, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@2cd27b22, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@72f94000, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@601c7526, org.springframework.boot.test.web.reactive.server.WebTestClientContextCustomizer@5cfa0929], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]], class annotated with @DirtiesContext [false] with mode [null].
+22:11:08.818 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.pandora.analytics.Visit.VisitControllerTest]
+22:11:08.818 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.pandora.analytics.Visit.VisitControllerTest]
+22:11:08.834 [Test worker] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@2c4fe63e testClass = VisitControllerTest, testInstance = com.pandora.analytics.Visit.VisitControllerTest@368850df, testMethod = [null], testException = [null], mergedContextConfiguration = [ReactiveWebMergedContextConfiguration@72ba4141 testClass = VisitControllerTest, locations = '{}', classes = '{class com.pandora.analytics.AnalyticsApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@35346cb1, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@2cd27b22, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@72f94000, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@601c7526, org.springframework.boot.test.web.reactive.server.WebTestClientContextCustomizer@5cfa0929], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]]].
+22:11:08.900 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.8.RELEASE)
+
+2019-09-27 22:11:09.717  INFO 764 --- [    Test worker] c.p.analytics.Visit.VisitControllerTest  : Starting VisitControllerTest on DESKTOP-1P8EOM7 with PID 764 (started by guve4 in C:\Users\guve4\www\analytics)
+2019-09-27 22:11:09.719  INFO 764 --- [    Test worker] c.p.analytics.Visit.VisitControllerTest  : No active profile set, falling back to default profiles: default
+2019-09-27 22:11:11.974  INFO 764 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-27 22:11:12.517  INFO 764 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 522ms. Found 1 repository interfaces.
+2019-09-27 22:11:12.541  INFO 764 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-27 22:11:12.557  INFO 764 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15ms. Found 0 repository interfaces.
+2019-09-27 22:11:15.408  INFO 764 --- [    Test worker] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-09-27 22:11:16.133  INFO 764 --- [    Test worker] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-09-27 22:11:16.133  INFO 764 --- [    Test worker] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2019-09-27 22:11:16.291  INFO 764 --- [localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:30}] to localhost:27017
+2019-09-27 22:11:16.313  INFO 764 --- [localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 9]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=16953300}
+2019-09-27 22:11:16.323  INFO 764 --- [localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2019-09-27 22:11:19.274  INFO 764 --- [localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:31}] to localhost:27017
+2019-09-27 22:11:19.284  INFO 764 --- [localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 9]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=8603600}
+2019-09-27 22:11:19.912  INFO 764 --- [    Test worker] c.p.analytics.Visit.VisitControllerTest  : Started VisitControllerTest in 10.997 seconds (JVM running for 14.802)
+2019-09-27 22:11:21.836  INFO 764 --- [ntLoopGroup-2-2] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:32}] to localhost:27017
+2019-09-27 22:11:21.926 ERROR 764 --- [ntLoopGroup-2-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [6628f2e6] 500 Server Error for HTTP POST &quot;/visits&quot;
+
+java.lang.IllegalStateException: Could not resolve view with name 'visits'.
+	at org.springframework.web.reactive.result.view.ViewResolutionResultHandler.lambda$resolveViews$3(ViewResolutionResultHandler.java:275) ~[spring-webflux-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:107) [reactor-core-3.2.12.RELEASE.jar:3.2.12.RELEASE]
+	at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1515) ~[reactor-core-3.2.12.RELEASE.jar:3.2.12.RELEASE]
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:121) ~[reactor-core-3.2.12.RELEASE.jar:3.2.12.RELEASE]
+	at reactor.core.publisher.FluxConcatMap$ConcatMapImmediate.drain(FluxConcatMap.java:360) ~[reactor-core-3.2.12.RELEASE.jar:3.2.12.RELEASE]
+	at reactor.core.publisher.FluxConcatMap$ConcatMapImmediate.onComplete(FluxConcatMap.java:269) ~[reactor-core-3.2.12.RELEASE.jar:3.2.12.RELEASE]
+	at reactor.core.publisher.Operators.complete(Operators.java:131) ~[reactor-core-3.2.12.RELEASE.jar:3.2.12.RELEASE]
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:122) ~[reactor-core-3.2.12.RELEASE.jar:3.2.12.RELEASE]
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:63) ~[reactor-core-3.2.12.RELEASE.jar:3.2.12.RELEASE]
+	at reactor.core.publisher.FluxConcatMap.subscribe(FluxConcatMap.java:121) ~[reactor-core-3.2.12.RELEASE.jar:3.2.12.RELEASE]
+	at reactor.core.publisher.MonoCollectList.subscribe(MonoCollectList.java:40) ~[reactor-core-3.2.12.RELEASE.jar:3.2.12.RELEASE]
+	at reactor.core.publisher.MonoMapFuseable.subscribe(MonoMapFuseable.java:59) ~[reactor-core-3.2.12.RELEASE.jar:3.2.12.RELEASE]
+	at reactor.core.publisher.MonoFlatMap.subscribe(MonoFlatMap.java:60) ~[reactor-core-3.2.12.RELEASE.jar:3.2.12.RELEASE]
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:150) ~[reactor-core-3.2.12.RELEASE.jar:3.2.12.RELEASE]
+	at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:67) ~[reactor-core-3.2.12.RELEASE.jar:3.2.12.RELEASE]
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:121) [reactor-core-3.2.12.RELEASE.jar:3.2.12.RELEASE]
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:121) [reactor-core-3.2.12.RELEASE.jar:3.2.12.RELEASE]
+	at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1515) ~[reactor-core-3.2.12.RELEASE.jar:3.2.12.RELEASE]
+	at reactor.core.publisher.MonoTakeLastOne$TakeLastOneSubscriber.onComplete(MonoTakeLastOne.java:112) ~[reactor-core-3.2.12.RELEASE.jar:3.2.12.RELEASE]
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onComplete(Operators.java:1743) ~[reactor-core-3.2.12.RELEASE.jar:3.2.12.RELEASE]
+	at com.mongodb.reactivestreams.client.internal.ObservableToPublisher$1.onComplete(ObservableToPublisher.java:78) ~[mongodb-driver-reactivestreams-1.9.2.jar:na]
+	at com.mongodb.async.client.AbstractSubscription.onComplete(AbstractSubscription.java:145) ~[mongodb-driver-async-3.8.2.jar:na]
+	at com.mongodb.async.client.AbstractSubscription.processResultsQueue(AbstractSubscription.java:211) ~[mongodb-driver-async-3.8.2.jar:na]
+	at com.mongodb.async.client.AbstractSubscription.tryProcessResultsQueue(AbstractSubscription.java:159) ~[mongodb-driver-async-3.8.2.jar:na]
+	at com.mongodb.async.client.SingleResultCallbackSubscription$1.onResult(SingleResultCallbackSubscription.java:48) ~[mongodb-driver-async-3.8.2.jar:na]
+	at com.mongodb.reactivestreams.client.internal.PublisherHelper$1.onResult(PublisherHelper.java:34) ~[mongodb-driver-reactivestreams-1.9.2.jar:na]
+	at com.mongodb.reactivestreams.client.internal.PublisherHelper$1.onResult(PublisherHelper.java:31) ~[mongodb-driver-reactivestreams-1.9.2.jar:na]
+	at com.mongodb.async.client.MongoCollectionImpl$1.onResult(MongoCollectionImpl.java:493) ~[mongodb-driver-async-3.8.2.jar:na]
+	at com.mongodb.async.client.MongoCollectionImpl$1.onResult(MongoCollectionImpl.java:490) ~[mongodb-driver-async-3.8.2.jar:na]
+	at com.mongodb.async.client.MongoCollectionImpl$9.onResult(MongoCollectionImpl.java:1042) ~[mongodb-driver-async-3.8.2.jar:na]
+	at com.mongodb.async.client.MongoCollectionImpl$9.onResult(MongoCollectionImpl.java:1026) ~[mongodb-driver-async-3.8.2.jar:na]
+	at com.mongodb.internal.async.ErrorHandlingResultCallback.onResult(ErrorHandlingResultCallback.java:49) ~[mongodb-driver-core-3.8.2.jar:na]
+	at com.mongodb.async.client.OperationExecutorImpl$2$1.onResult(OperationExecutorImpl.java:117) ~[mongodb-driver-async-3.8.2.jar:na]
+	at com.mongodb.internal.async.ErrorHandlingResultCallback.onResult(ErrorHandlingResultCallback.java:49) ~[mongodb-driver-core-3.8.2.jar:na]
+	at com.mongodb.operation.OperationHelper$ConnectionReleasingWrappedCallback.onResult(OperationHelper.java:384) ~[mongodb-driver-core-3.8.2.jar:na]
+	at com.mongodb.operation.MixedBulkWriteOperation.addBatchResult(MixedBulkWriteOperation.java:485) ~[mongodb-driver-core-3.8.2.jar:na]
+	at com.mongodb.operation.MixedBulkWriteOperation.access$1500(MixedBulkWriteOperation.java:67) ~[mongodb-driver-core-3.8.2.jar:na]
+	at com.mongodb.operation.MixedBulkWriteOperation$6.onResult(MixedBulkWriteOperation.java:468) ~[mongodb-driver-core-3.8.2.jar:na]
+	at com.mongodb.operation.MixedBulkWriteOperation$6.onResult(MixedBulkWriteOperation.java:443) ~[mongodb-driver-core-3.8.2.jar:na]
+	at com.mongodb.internal.async.ErrorHandlingResultCallback.onResult(ErrorHandlingResultCallback.java:49) ~[mongodb-driver-core-3.8.2.jar:na]
+	at com.mongodb.internal.connection.DefaultServer$DefaultServerProtocolExecutor$2.onResult(DefaultServer.java:227) ~[mongodb-driver-core-3.8.2.jar:na]
+	at com.mongodb.internal.async.ErrorHandlingResultCallback.onResult(ErrorHandlingResultCallback.java:49) ~[mongodb-driver-core-3.8.2.jar:na]
+	at com.mongodb.internal.connection.CommandProtocolImpl$1.onResult(CommandProtocolImpl.java:85) ~[mongodb-driver-core-3.8.2.jar:na]
+	at com.mongodb.internal.connection.DefaultConnectionPool$PooledConnection$1.onResult(DefaultConnectionPool.java:461) ~[mongodb-driver-core-3.8.2.jar:na]
+	at com.mongodb.internal.connection.UsageTrackingInternalConnection$2.onResult(UsageTrackingInternalConnection.java:111) ~[mongodb-driver-core-3.8.2.jar:na]
+	at com.mongodb.internal.async.ErrorHandlingResultCallback.onResult(ErrorHandlingResultCallback.java:49) ~[mongodb-driver-core-3.8.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection$2$1.onResult(InternalStreamConnection.java:379) ~[mongodb-driver-core-3.8.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection$2$1.onResult(InternalStreamConnection.java:356) ~[mongodb-driver-core-3.8.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection$MessageHeaderCallback$MessageCallback.onResult(InternalStreamConnection.java:651) ~[mongodb-driver-core-3.8.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection$MessageHeaderCallback$MessageCallback.onResult(InternalStreamConnection.java:618) ~[mongodb-driver-core-3.8.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection$5.completed(InternalStreamConnection.java:494) ~[mongodb-driver-core-3.8.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection$5.completed(InternalStreamConnection.java:491) ~[mongodb-driver-core-3.8.2.jar:na]
+	at com.mongodb.connection.netty.NettyStream.readAsync(NettyStream.java:236) ~[mongodb-driver-core-3.8.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.readAsync(InternalStreamConnection.java:491) ~[mongodb-driver-core-3.8.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.access$1000(InternalStreamConnection.java:74) ~[mongodb-driver-core-3.8.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection$MessageHeaderCallback.onResult(InternalStreamConnection.java:608) ~[mongodb-driver-core-3.8.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection$MessageHeaderCallback.onResult(InternalStreamConnection.java:593) ~[mongodb-driver-core-3.8.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection$5.completed(InternalStreamConnection.java:494) ~[mongodb-driver-core-3.8.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection$5.completed(InternalStreamConnection.java:491) ~[mongodb-driver-core-3.8.2.jar:na]
+	at com.mongodb.connection.netty.NettyStream.readAsync(NettyStream.java:236) ~[mongodb-driver-core-3.8.2.jar:na]
+	at com.mongodb.connection.netty.NettyStream.handleReadResponse(NettyStream.java:266) ~[mongodb-driver-core-3.8.2.jar:na]
+	at com.mongodb.connection.netty.NettyStream.access$600(NettyStream.java:66) ~[mongodb-driver-core-3.8.2.jar:na]
+	at com.mongodb.connection.netty.NettyStream$InboundBufferHandler.channelRead0(NettyStream.java:325) ~[mongodb-driver-core-3.8.2.jar:na]
+	at com.mongodb.connection.netty.NettyStream$InboundBufferHandler.channelRead0(NettyStream.java:322) ~[mongodb-driver-core-3.8.2.jar:na]
+	at io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:105) ~[netty-transport-4.1.39.Final.jar:4.1.39.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374) ~[netty-transport-4.1.39.Final.jar:4.1.39.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360) ~[netty-transport-4.1.39.Final.jar:4.1.39.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352) ~[netty-transport-4.1.39.Final.jar:4.1.39.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1421) ~[netty-transport-4.1.39.Final.jar:4.1.39.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374) ~[netty-transport-4.1.39.Final.jar:4.1.39.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360) ~[netty-transport-4.1.39.Final.jar:4.1.39.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:930) ~[netty-transport-4.1.39.Final.jar:4.1.39.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:163) ~[netty-transport-4.1.39.Final.jar:4.1.39.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:697) ~[netty-transport-4.1.39.Final.jar:4.1.39.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:632) ~[netty-transport-4.1.39.Final.jar:4.1.39.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:549) ~[netty-transport-4.1.39.Final.jar:4.1.39.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:511) ~[netty-transport-4.1.39.Final.jar:4.1.39.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:918) ~[netty-common-4.1.39.Final.jar:4.1.39.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.39.Final.jar:4.1.39.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.39.Final.jar:4.1.39.Final]
+	at java.base/java.lang.Thread.run(Thread.java:844) ~[na:na]
+
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 5.6.2</a> at Sep 27, 2019, 10:11:24 PM</p>
+</div>
+</div>
+</body>
+</html>
