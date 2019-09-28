@@ -1,4 +1,4 @@
-package com.pandora.analytics.Visit
+package com.pandora.analytics.visit
 
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository
 

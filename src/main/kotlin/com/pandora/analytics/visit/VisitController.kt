@@ -1,10 +1,8 @@
-package com.pandora.analytics.Visit
+package com.pandora.analytics.visit
 
 import org.springframework.http.HttpStatus
-import org.springframework.stereotype.Controller
 import org.springframework.web.bind.annotation.*
 import reactor.core.publisher.Flux
-import reactor.core.publisher.toFlux
 
 @RestController
 @RequestMapping("/visits")
