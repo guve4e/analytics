@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*
 import reactor.core.publisher.Flux
 import reactor.core.publisher.toFlux
 
-@Controller
+@RestController
 @RequestMapping("/visits")
 class VisitController(private val visitRepository: VisitRepository) {
 
