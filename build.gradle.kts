@@ -1,4 +1,5 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.springframework.boot.gradle.tasks.bundling.BootJar
 
 plugins {
 	id("org.springframework.boot") version "2.1.8.RELEASE"
@@ -10,6 +11,10 @@ plugins {
 group = "com.pandora"
 version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_1_8
+
+tasks.getByName<BootJar>("bootJar") {
+	classifier = "boot"
+}
 
 repositories {
 	mavenCentral()
