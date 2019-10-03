@@ -26,7 +26,7 @@ class SecurityConfig {
                 .csrf()
                 .disable()
                 .authorizeExchange()
-                .pathMatchers("/test")
+                .pathMatchers("/**")
                 .permitAll()
                 .anyExchange().authenticated()
                 .and()

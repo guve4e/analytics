@@ -9,6 +9,7 @@ import org.springframework.test.context.junit4.SpringRunner
 
 import org.springframework.test.web.reactive.server.WebTestClient
 import org.springframework.test.web.reactive.server.expectBodyList
+import java.util.*
 
 @RunWith(SpringRunner::class)
 @SpringBootTest
@@ -28,10 +29,20 @@ internal class VisitControllerTest {
 
     @Test
     fun testAddAndGetVisit() {
+
+        var visit = Visit(
+                "192.168.1.12",
+                "http//soemepage.com/someview",
+                "http//soemepage.com/someotherview",
+                "GET",
+                "some remote host",
+                "some user agent",
+                "wejidjidjcijsjdicjs")
+
         client
                 .post()
                 .uri("/visits")
-                .syncBody(Visit("1", "2"))
+                .syncBody(visit)
                 .exchange()
                 .expectStatus()
                 .isCreated
