@@ -1,7 +1,6 @@
 package com.pandora.analytics.stats;
 
 import com.pandora.analytics.visit.Stats;
-import com.pandora.analytics.visit.Visit;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Mono;

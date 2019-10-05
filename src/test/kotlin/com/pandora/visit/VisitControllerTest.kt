@@ -1,5 +1,7 @@
 package com.pandora.analytics.visit
 
+import com.pandora.analytics.stats.Visit
+import com.pandora.analytics.stats.VisitByDay
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -9,8 +11,6 @@ import org.springframework.test.context.junit4.SpringRunner
 
 import org.springframework.test.web.reactive.server.WebTestClient
 import org.springframework.test.web.reactive.server.expectBodyList
-import java.time.LocalDateTime
-import java.util.*
 
 @RunWith(SpringRunner::class)
 @SpringBootTest

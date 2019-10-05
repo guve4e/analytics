@@ -1,6 +1,7 @@
 package com.pandora.analytics.visit
 
-import com.pandora.analytics.stats.StatsRepository
+import com.pandora.analytics.stats.Visit
+import com.pandora.analytics.stats.VisitByDay
 import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.*
 import reactor.core.publisher.Flux

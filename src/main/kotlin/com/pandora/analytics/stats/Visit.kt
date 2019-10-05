@@ -1,4 +1,4 @@
-package com.pandora.analytics.visit
+package com.pandora.analytics.stats
 
 import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document

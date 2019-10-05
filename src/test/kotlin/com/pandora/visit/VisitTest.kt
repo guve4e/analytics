@@ -1,5 +1,7 @@
 package com.pandora.analytics.visit
 
+import com.pandora.analytics.stats.Visit
+import com.pandora.analytics.stats.VisitByDay
 import org.junit.Test
 import reactor.core.publisher.Flux
 import java.time.LocalDateTime
@@ -11,13 +13,13 @@ internal class VisitTest {
 
         val list = mutableListOf(
                 Visit(
-                "192.168.1.12",
-                "http//soemepage.com/someview",
-                "http//soemepage.com/someotherview",
-                "GET",
-                "some remote host",
-                "some user agent",
-                "wejidjidjcijsjdicjs",
+                        "192.168.1.12",
+                        "http//soemepage.com/someview",
+                        "http//soemepage.com/someotherview",
+                        "GET",
+                        "some remote host",
+                        "some user agent",
+                        "wejidjidjcijsjdicjs",
                         LocalDateTime.parse("2019-01-28T13:42:17.546")
                 ),
                 Visit(
@@ -60,13 +62,13 @@ internal class VisitTest {
                         "wejidjidjcijsjdicjs",
                         LocalDateTime.parse("2019-04-12T13:42:17.546")),
                 Visit(
-                "192.168.1.12",
-                "http//soemepage.com/someview",
-                "http//soemepage.com/someotherview",
-                "GET",
-                "some remote host",
-                "some user agent",
-                "wejidjidjcijsjdicjs",
+                        "192.168.1.12",
+                        "http//soemepage.com/someview",
+                        "http//soemepage.com/someotherview",
+                        "GET",
+                        "some remote host",
+                        "some user agent",
+                        "wejidjidjcijsjdicjs",
                         LocalDateTime.parse("2019-01-30T13:42:17.546")
                 )
         )
