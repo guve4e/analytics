@@ -1,4 +1,5 @@
 package com.pandora.analytics.stats
+import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.http.ResponseEntity.ok
 import org.springframework.web.bind.annotation.*
@@ -19,6 +20,7 @@ class StatsController(private val statsRepository: StatsRepository) {
             statsRepository.save(Stats1("1"))
 
     @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
     fun addVisit(@RequestBody visit: Visit): Mono<ResponseEntity<Stats1>> =
         statsRepository.findById("1")
                 .flatMap { s ->
