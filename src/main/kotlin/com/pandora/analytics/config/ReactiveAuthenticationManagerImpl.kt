@@ -87,7 +87,7 @@ class ReactiveAuthenticationManagerImpl(private val webClient: WebClient.Builder
     override fun authenticate(authentication: Authentication): Mono<Authentication> {
         return Mono.just(authentication)
                 .cast(BearerTokenAuthenticationToken::class.java)
-                .flatMap { it -> authorizeToken(it.token) }
+                .flatMap {authorizeToken(it.token) }
                 .flatMap { result -> Mono.just(extractAuthentication(result)) }
     }
 }
