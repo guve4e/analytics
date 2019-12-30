@@ -64,7 +64,7 @@ class ReactiveAuthenticationManagerImpl(private val webClient: WebClient.Builder
                 .post()
                 .uri { builder ->
                     builder
-                            .scheme("http")
+                            .scheme("https")
                             .host(authorizationServerUrl)
                             .path("oauth/check_token")/*.port(8100)*/
                             .queryParam("token", accessToken)
